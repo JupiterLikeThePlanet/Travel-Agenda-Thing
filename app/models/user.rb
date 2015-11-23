@@ -1,3 +1,4 @@
 class User < ActiveRecord::Base
-  # Remember to create a migration!
+  has_many :agendas
+  has_many :cities, through: :agendas
 end
