@@ -12,6 +12,7 @@ post '/login' do
     redirect "/users/#{@user.id}"
   else
     redirect '/login'
+  end
 end
 
 #shows a create new user
@@ -20,11 +21,12 @@ get '/users/new' do
 end
 
 #create
-post '/users' do
+post '/users/new' do
+  # raise params.inspect
   @user = User.new(params)
   if @user.save
     session[:id] = @user.id
-    redirect '/users/#{@user.id}'
+    redirect "/users/#{@user.id}"
   else
     status 422
   end

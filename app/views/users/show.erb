@@ -8,13 +8,17 @@
       <li><%= agenda.name %><li>
     <% end %>
   </ul>
-
-  <h3>Your Saved Agendas</h3>
+<!--Problem with the Banks relationship to the user -->
+<!--   <h3>Your Saved Agendas</h3>
   <ul>
-    <%@user.saves.each do |save|%>
-      <li><%= Agenda.find(save.agenda_id).name %></li>
-    <%end%>
-  </ul>
-
+    <%#if @user.banks%>
+    <%@u ser.banks.each #do |bank|%>
+      <li><%= #Agenda.find(bank.agenda_id).name %></li>
+    <%#end%>
+    <%#else%>
+      <p> No stored agendas </p>
+  <%#end%> -->
+<!--   </ul>
+ -->
 
 </div>
