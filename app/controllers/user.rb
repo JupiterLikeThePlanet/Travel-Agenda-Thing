@@ -1,8 +1,17 @@
 
 enable :sessions
 #index
-get '/' do
+get '/login' do
   erb :"/users/index"
+end
+
+post '/login' do
+  @user = User.find_by(username: params[:username])
+  if @user.password == params[:password]
+    session[:id] = @user.id
+    redirect "/users/#{@user.id}"
+  else
+    redirect '/login'
 end
 
 #shows a create new user
