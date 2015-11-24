@@ -10,7 +10,11 @@
   </ul>
 
   <h3>Your Saved Agendas</h3>
-
   <ul>
+    <%@user.saves.each do |save|%>
+      <li><%= Agenda.find(save.agenda_id).name %></li>
+    <%end%>
+  </ul>
+
 
 </div>
