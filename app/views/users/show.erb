@@ -1,0 +1,15 @@
+<div class="container">
+
+  <h1>Hello, <%= @user.username %></h1>
+
+  <h3>Your Agendas</h3>
+  <ul>
+    <% @user.agendas.each do |agenda| %>
+      <li><%= agenda.name %><li>
+    <% end %>
+  </ul>
+
+  <h3>Your Saved Agendas</h3>
+  <ul>
+
+</div>

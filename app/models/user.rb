@@ -3,6 +3,7 @@ require 'bcrypt'
 class User < ActiveRecord::Base
   include BCrypt
   has_many :agendas
+  has_many :saved_agendas,
   has_many :cities, through: :agendas
 
 
