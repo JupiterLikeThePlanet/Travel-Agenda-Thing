@@ -1,0 +1,24 @@
+<div class="container">
+
+  <h1>Hello, <%= @user.username %></h1>
+
+  <h3>Your Agendas</h3>
+  <ul>
+    <% @user.agendas.each do |agenda| %>
+      <li><%= agenda.name %><li>
+    <% end %>
+  </ul>
+<!--Problem with the Banks relationship to the user -->
+<!--   <h3>Your Saved Agendas</h3>
+  <ul>
+    <%#if @user.banks%>
+    <%@u ser.banks.each #do |bank|%>
+      <li><%= #Agenda.find(bank.agenda_id).name %></li>
+    <%#end%>
+    <%#else%>
+      <p> No stored agendas </p>
+  <%#end%> -->
+<!--   </ul>
+ -->
+
+</div>
